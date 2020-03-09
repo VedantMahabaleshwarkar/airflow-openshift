@@ -11,6 +11,9 @@ Deploys the following components to get Apache Airflow running as an application
 
 `oc process -f airflow.template.yml  | oc create -f -`  
 
+### Note:  
+You will need to rsh into the Webserver and Worker Pods and execute `airflow initdb` once the application is deployed.   
+
 
 ### Credentials for the Flower UI:  
 flower:flower  
