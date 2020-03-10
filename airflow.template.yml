@@ -780,7 +780,7 @@ objects:
       - "ReadWriteOnce"
     resources:
       requests:
-        storage: "50Mi"
+        storage: "1Gi"
 - apiVersion: v1
   data:
     config: |
@@ -840,7 +840,7 @@ objects:
   kind: PersistentVolumeClaim
   metadata:
     name: 'postgresql'
-    namespace: airflowos
+    namespace: ${PROJECT_NAME}
   spec:
     accessModes:
       - ReadWriteOnce
@@ -983,7 +983,7 @@ parameters:
 - description: Application name.
   displayName: Airflow Application Name.
   name: APPLICATION_NAME
-  value: airflowos
+  value: dh-stage-airflow
   required: true
 - description: Airflow image link.
   displayName: Airflow Image Link.
@@ -998,7 +998,7 @@ parameters:
 - description: Namespace
   displayName: Project Name.
   name: PROJECT_NAME
-  value: airflowos
+  value: dh-stage-airflow
 - description: Attached volume name
   displayName: Volume Name
   name: VOLUME_NAME
